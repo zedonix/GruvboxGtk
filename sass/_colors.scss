@@ -152,9 +152,9 @@ $titlebar-indicator:                    if($variant == 'dark', currentColor, $pr
 $inverse-indicator:                     mix($primary, $white, 0%);
 $applet-primary:                        if($theme == 'grey' and variant == 'light' and $topbar == 'dark', $grey-200, $primary);
 
-$background:                            if($variant == 'light', background(a), background(f));
-$surface:                               if($variant == 'light', background(b), background(g));
-$base:                                  if($variant == 'light', background(c), background(h));
+$background:                            #282828;
+$surface:                               #282828;
+$base:                                  #282828;
 $base-alt:                              if($variant == 'light', background(d), background(h));
 $card:                                  if($variant == 'light', background(b), background(h));
 $menu:                                  if($variant == 'light', $grey-150, $grey-850);
