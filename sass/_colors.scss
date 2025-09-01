@@ -145,7 +145,7 @@
 }
 
 // Basic colors
-$primary:                               #282828;
+$primary:                               theme(color);
 $drop_target_color:                     $orange-dark;
 $indicator:                             if($variant == 'dark', mix($primary, background(b), 0%), mix($primary, background(f), 0%));
 $titlebar-indicator:                    if($variant == 'dark', currentColor, $primary);
@@ -155,21 +155,21 @@ $applet-primary:                        if($theme == 'grey' and variant == 'ligh
 $background:                            #282828;
 $surface:                               #282828;
 $base:                                  #282828;
-$base-alt:                              #282828;
-$card:                                  #282828;
-$menu:                                  #282828;
+$base-alt:                              if($variant == 'light', background(d), background(h));
+$card:                                  if($variant == 'light', background(b), background(h));
+$menu:                                  if($variant == 'light', $grey-150, $grey-850);
 
 $tooltip:                               if($variant == 'dark', rgba(darken(background(f), 3%), 0.9), rgba(darken(background(h), 3%), 0.9));
 $osd:                                   mix($primary, background(f), 0%);
 $scrim:                                 mix($primary, background(g), 0%);
 $scrim-alt:                             mix($primary, background(h), 0%);
 $scrim-inverse:                         rgba($white, 0.1);
-$titlebar:                              #282828;
-$titlebar-backdrop:                     #282828;
-$titlebar-indicator:                    #282828;
+$titlebar:                              if($variant == 'light', background(a), background(f));
+$titlebar-backdrop:                     if($variant == 'light', background(a), background(f));
+$titlebar-indicator:                    if($topbar  == 'dark', 	background(b), background(e));
 $popover:                               if($variant == 'light', background(a), background(g));
 $panel-solid:                           if($topbar  == 'dark', 	background(f), background(d)); // for Unity panel which doesn't allow translucent colors
-$panel:                                 #282828;
+$panel:                                 rgba($panel-solid, $panel_opacity);
 
 $button:                                if($variant == 'dark', on($background, secondary-fill), on($background, fill));
 $entry:                                 if($variant == 'dark', on($background, secondary-fill), on($background, fill));
